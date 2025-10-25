@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Exam Seating System</title>
+
+  <!-- Optional: Tailwind CDN (uncomment one of these if using Tailwind variant below) -->
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <!-- Font-awesome / Lucide icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+
+  <!-- html2canvas for download feature (optional) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Exam Seating System</h1>
+
+    <section class="controls">
+      <div class="grid-inputs">
+        <label>Rows (N): <input id="rows" type="number" value="5" min="1" /></label>
+        <label>Columns (M): <input id="cols" type="number" value="6" min="1" /></label>
+      </div>
+
+      <div class="dept-inputs">
+        <h3>Departments & counts</h3>
+        <div class="dept-row">
+          <label>CSE <input type="number" id="CSE" value="8" min="0" /></label>
+          <label>ECE <input type="number" id="ECE" value="8" min="0" /></label>
+          <label>IT  <input type="number" id="IT"  value="8" min="0" /></label>
+          <label>MECH<input type="number" id="MECH"value="8" min="0" /></label>
+          <label>CIVIL<input type="number" id="CIVIL"value="8" min="0" /></label>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="generate" class="btn primary"><i class="fa fa-play"></i> Generate</button>
+        <button id="shuffle"  class="btn"><i class="fa fa-random"></i> Shuffle</button>
+        <button id="download" class="btn"><i class="fa fa-download"></i> Download PNG</button>
+        <button id="reset" class="btn danger"><i class="fa fa-refresh"></i> Reset</button>
+      </div>
+    </section>
+
+    <section id="seating-wrap">
+      <!-- seating chart will be injected here -->
+    </section>
+
+    <footer>
+      <small>Smart Exam Seating — ensures no two adjacent seats belong to same department.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

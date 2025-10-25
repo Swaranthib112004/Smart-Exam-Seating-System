@@ -1,0 +1,49 @@
+:root{
+  --gap: 8px;
+  --seat-size: 100px;
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --muted: #666;
+}
+
+/* department colors */
+.dept-CSE  { background: linear-gradient(135deg,#ffefba,#ffc3a0); }
+.dept-ECE  { background: linear-gradient(135deg,#c7ffd8,#79f2b3); }
+.dept-IT   { background: linear-gradient(135deg,#cfe9ff,#7fbefc); }
+.dept-MECH { background: linear-gradient(135deg,#ffd6f0,#ff9fcc); }
+.dept-CIVIL{ background: linear-gradient(135deg,#e6e6ff,#c7c7ff); }
+
+* { box-sizing: border-box; font-family: Inter, system-ui, Arial; }
+body { margin: 0; background: var(--bg); color: #222; padding: 20px; }
+.container { max-width: 1100px; margin: auto; background: var(--card); padding: 18px; border-radius: 10px; box-shadow: 0 6px 20px rgba(18,24,40,0.06); }
+h1 { margin: 0 0 10px 0; font-size: 22px; }
+.controls { display:flex; gap:16px; flex-wrap:wrap; align-items:center; margin-bottom:16px; }
+.grid-inputs label { margin-right:8px; font-weight:600; }
+.grid-inputs input { width:70px; margin-left:6px; padding:6px; border-radius:6px; border:1px solid #d7d7d7;}
+
+.dept-inputs { flex:1; min-width: 360px; }
+.dept-row label { display:inline-block; margin-right:10px; font-weight:600; }
+.dept-row input { width:70px; margin-left:6px; padding:6px; border-radius:6px; border:1px solid #d7d7d7; }
+
+.buttons { display:flex; gap:8px; align-items:center; }
+.btn { padding:8px 12px; border-radius:8px; border:1px solid #d7d7d7; background:#fff; cursor:pointer; }
+.btn.primary { background: #2b6ef6; color: #fff; border: none;}
+.btn.danger { background: #fff0f0; color: #c32; border: 1px solid #f2c1c1; }
+
+#seating-wrap { margin-top:16px; overflow:auto; padding:12px; background:#fafafa; border-radius:8px; min-height:120px; }
+
+.seating-grid { border-collapse:collapse; margin:auto; }
+.seating-grid td { width: var(--seat-size); height: var(--seat-size); text-align:center; vertical-align:middle; padding:8px; border-radius:10px; margin:6px; }
+.seat { display:flex; flex-direction:column; justify-content:center; align-items:center; border-radius:8px; padding:8px; color:#102; font-weight:700; box-shadow:0 3px 8px rgba(0,0,0,0.08); border: 1px solid rgba(0,0,0,0.06);}
+.seat small { font-weight:600; font-size:12px; color: #333; margin-top:6px; opacity:0.9; }
+.legend { margin-top:12px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+
+.legend-item { display:flex; gap:8px; align-items:center; padding:6px 8px; border-radius:8px; background:#fff; border:1px solid #eee; }
+.legend-color { width:18px; height:18px; border-radius:4px; }
+.alert { color:#a00; font-weight:700; margin-top:10px; }
+
+@media (max-width:700px){
+  :root{ --seat-size: 70px; }
+  .grid-inputs input, .dept-row input { width:56px; }
+}
+
