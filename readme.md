@@ -13,3 +13,4 @@ HTML | CSS | JavaScript | Tailwind CSS (optional) | html2canvas (optional)
 
 ## Live Demo
 [Smart Exam Seating System]
+https://swaranthib112004.github.io/Smart-Exam-Seating-System/
